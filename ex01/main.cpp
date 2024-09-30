@@ -5,25 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 14:13:02 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/09/30 14:46:54 by vkhrabro         ###   ########.fr       */
+/*   Created: 2024/09/30 14:37:04 by vkhrabro          #+#    #+#             */
+/*   Updated: 2024/09/30 15:32:49 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "whatever.hpp"
+#include "iter.hpp"
 
-int main( void ) {
-int a = 2;
-int b = 3;
-::swap( a, b );
-std::cout << "a = " << a << ", b = " << b << std::endl;
-std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-std::string c = "chaine1";
-std::string d = "chaine2";
-::swap(c, d);
-std::cout << "c = " << c << ", d = " << d << std::endl;
-std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
-return 0;
+int main(void){
+
+    char arr[][7] = {"HOW", "are", "YOU", "doing"};
+    std::cout << "Array content Before using iter: " << std::endl;
+    for (int i = 0; i < 4; i++)
+        std::cout << arr[i] << " ";
+    std::cout << std::endl << std::endl;
+    int number = 4;
+
+    std::cout << "Array content After using iter: " << std::endl;
+    iter(arr, number, caseChange);
+
+    std::cout << std::endl;
+
+    return 0;
 }
